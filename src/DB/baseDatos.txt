@@ -11,7 +11,7 @@ executeUpdate: Returns an integer representing the number of rows affected by th
 are using INSERT, DELETE, or UPDATE SQL statements
 
 create database gestortareas;
-use gestor tareas;
+use gestortareas;
 create user 'dante'@'%' identified by '2733920';
 GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'dante'@'%' WITH GRANT OPTION;
 
