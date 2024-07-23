@@ -40,6 +40,16 @@ public class Usuarios_table {
         }
     }
 
+    public String getDatabase(){
+        return this.database;
+    }
 
+    public String getUser() {
+        return user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
 }
