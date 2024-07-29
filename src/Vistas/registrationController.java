@@ -17,16 +17,16 @@ public class registrationController extends JPanel{
 
     public registrationController(){
 
-
         regresarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Main.frame.remove(Main.frame.getContentPane());
                 Main.frame.invalidate();
                 Main.frame.validate();
-
             }
         });
+
+
     }
 
 }
