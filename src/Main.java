@@ -1,5 +1,3 @@
-import DB.Usuarios_table;
-import Vistas.loginView;
 import Vistas.*;
 import javax.swing.*;
 
