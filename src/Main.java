@@ -1,4 +1,5 @@
-import Vistas.*;
+import Vistas.Home;
+
 import javax.swing.*;
 
 
@@ -11,7 +12,7 @@ class Main{
         //Usuarios_table conexion = new Usuarios_table();
 
         try{
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+            UIManager.setLookAndFeel("com.jtattoo.plaf.aero.AeroLookAndFeel");
         }
         catch(Exception e){
             System.out.println(e);
@@ -21,9 +22,12 @@ class Main{
         //frame.setContentPane(new login().rootPanel);
         frame.setContentPane(new Home().rootPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+        //frame.pack();
+        frame.setUndecorated(true);
         frame.setSize(1366, 768);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+
     }
 }

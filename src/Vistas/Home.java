@@ -18,7 +18,7 @@ public class Home extends JPanel implements ActionListener{
     public Home(){
         cards = new CardLayout();
         rootPanel = new JPanel(new MigLayout("fillx",
-                "10[left]r[]10",
+                "10[left]r[fill, grow]10",
                 "10[fill]r[]"));
         navBar = new JPanel(new MigLayout("fillx",
                 "r[right]r"));
@@ -35,8 +35,8 @@ public class Home extends JPanel implements ActionListener{
         mb.add(archivo);
 
         rootPanel.add(mb, "span, north, wrap");
-        rootPanel.add(navBar, "west");
-        rootPanel.add(windows, "east");
+        rootPanel.add(navBar, "west,");
+        rootPanel.add(windows, "east, grow");
 
         addButton = new JButton("Add");
         addButton.addActionListener(this);
@@ -48,7 +48,7 @@ public class Home extends JPanel implements ActionListener{
         cb.setSelectedIndex(0);
         cb.addActionListener(this);
 
-        navBar.add(cb, "span 2, left, wrap");
+        navBar.add(cb, "span, grow, left, wrap");
 
         JPanel tarea1 = new JPanel();
         tarea1.add(new JLabel("Esta es la tarea 1"));
