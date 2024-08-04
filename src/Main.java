@@ -6,11 +6,11 @@ import javax.swing.*;
 
 class Main{
     public static void main(String[] args) {
-        UIManager.LookAndFeelInfo info[] = UIManager.getInstalledLookAndFeels();
+        /*UIManager.LookAndFeelInfo info[] = UIManager.getInstalledLookAndFeels();
         for(UIManager.LookAndFeelInfo look: info)
-            System.out.println(look.getClassName());
+            System.out.println(look.getClassName());*/
 
-        Usuarios_table conexion = new Usuarios_table();
+        //Usuarios_table conexion = new Usuarios_table();
 
         try{
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");

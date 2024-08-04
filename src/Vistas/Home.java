@@ -27,7 +27,7 @@ public class Home extends JPanel implements ActionListener{
         this.add(rootPanel);
 
         mb = new JMenuBar();
-        JMenu archivo = new JMenu("archivo");
+        JMenu archivo = new JMenu("Archivo");
         JMenuItem nuevo = new JMenu("Nuevo");
         JMenuItem opciones = new JMenu("Opciones");
         archivo.add(nuevo);
@@ -46,6 +46,7 @@ public class Home extends JPanel implements ActionListener{
         String [] ventanas = {"tarea 1", "tarea 2"};
         cb = new JComboBox(ventanas);
         cb.setSelectedIndex(0);
+        cb.addActionListener(this);
 
         navBar.add(cb, "span 2, left, wrap");
 
@@ -65,7 +66,8 @@ public class Home extends JPanel implements ActionListener{
             System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         }
         if (e.getSource() == this.cb){
-            cards.show(this.windows, (String)cb.getSelectedItem());
+            cards.show(this.windows, (String)this.cb.getSelectedItem());
+            System.out.println(this.cb.getSelectedItem());
         }
     }
 }
