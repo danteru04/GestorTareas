@@ -40,6 +40,15 @@ public class Usuarios_table {
         }
     }
 
+    public boolean validarCampos(String [] campos){
+        for (String campo : campos){
+            if (campo.isBlank())
+                return false;
+            else;
+        }
+        return true;
+    }
+
     public String getDatabase(){
         return this.database;
     }

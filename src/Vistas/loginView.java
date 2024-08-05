@@ -1,7 +1,9 @@
 package Vistas;
 
+import DB.Usuarios_table;
 import Running.Main;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -18,14 +20,13 @@ public class loginView extends JPanel
     private JLabel registrationLabel;
 
         public loginView() {
+            Usuarios_table conexion = new Usuarios_table();
 
             registrationLabel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     super.mouseClicked(e);
-                    Main.frame.setContentPane(new registrationController().rootPanel);
-                    Main.frame.invalidate();
-                    Main.frame.validate();
+                    Main.cards.show(Main.cPane, "registro");
                 }
             });
         }

@@ -106,7 +106,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Arial Rounded MT Bold" size="22" style="1"/>
+          <font name="Arial" size="20" style="1"/>
           <text value="GESTOR DE TAREAS" noi18n="true"/>
           <verifyInputWhenFocusTarget value="true"/>
           <verticalAlignment value="3"/>
@@ -120,7 +120,7 @@
           </grid>
         </constraints>
         <properties>
-          <font name="Arial Rounded MT Bold" size="20" style="1"/>
+          <font name="Arial" size="18" style="1"/>
           <text value="LOGIN"/>
           <verticalAlignment value="1"/>
           <verticalTextPosition value="1"/>
