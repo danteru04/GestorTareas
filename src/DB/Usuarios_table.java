@@ -10,6 +10,7 @@ public class Usuarios_table {
     String user;
     String password;
     Connection connection;
+    Statement statement;
 
     public Usuarios_table(){
         this.database  = "gestortareas";
@@ -40,7 +41,23 @@ public class Usuarios_table {
         }
     }
 
-    public String getDatabase(){
+    public void agregarUsuario(String name, String ap_paterno, String ap_materno, String email, String password){
+        try{
+            statement = connection.createStatement();
+            int rowsAffected = statement.executeUpdate("INSERT INTO usuarios (nombre," +
+                    "ap_paterno, ap_materno, email, password) VALUES (" +
+                    name+", "+ ap_paterno+", "+ap_materno+","+email+", "+password+");");
+            System.out.println(rowsAffected + " filas han sido cambiadas");
+        }
+        catch(SQLException e){
+            System.out.println("La conexión de la Base de Datos "+ this.database + " ha fallado");
+            System.out.println(e);
+            System.exit(0);
+        }
+    }
+
+
+        public String getDatabase(){
         return this.database;
     }
 
